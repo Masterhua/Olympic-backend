@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  olympic-app:
+    build:
+      context: .
+    container_name: olympic-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/olympic
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=124578
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mysql:8.0
+    container_name: olympic-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 124578
+      MYSQL_DATABASE: olympic
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  db_data:
