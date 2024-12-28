@@ -18,7 +18,7 @@ public class UserEntity {
     private Long id;
 
     @NotEmpty(message = "Username is required")
-    @Size(min = 3, max = 10, message = "Username must be between 3 and 10 characters")
+    @Size(min = 3, max = 20, message = "Username must be between 3 and 10 characters")
     private String username;
 
     @NotEmpty(message = "Password is required")
@@ -29,7 +29,7 @@ public class UserEntity {
     @Email(message = "Email should be valid")
     private String email;
 
-    private String nickname = "User"; // 默认值
+    private String nickname = "User";
 
     @Column(nullable = false)
     private String role;

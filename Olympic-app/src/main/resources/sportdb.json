@@ -1,0 +1,729 @@
+[
+  {
+    "noc": "USA",
+    "disciplines": [
+      { "name": "Basketball", "gold": 10, "silver": 12, "bronze": 8 },
+      { "name": "Athletics", "gold": 7, "silver": 10, "bronze": 9 },
+      { "name": "Swimming", "gold": 12, "silver": 10, "bronze": 8 },
+      { "name": "Gymnastics", "gold": 5, "silver": 7, "bronze": 6 },
+      { "name": "Track Cycling", "gold": 3, "silver": 4, "bronze": 6 },
+      { "name": "Rowing", "gold": 3, "silver": 3, "bronze": 3 },
+      { "name": "Tennis", "gold": 2, "silver": 2, "bronze": 2 },
+      { "name": "Volleyball", "gold": 3, "silver": 2, "bronze": 1 },
+      { "name": "Boxing", "gold": 4, "silver": 3, "bronze": 3 },
+      { "name": "Fencing", "gold": 3, "silver": 3, "bronze": 5 }
+    ]
+  },
+  {
+    "noc": "CHN",
+    "disciplines": [
+      { "name": "Table Tennis", "gold": 10, "silver": 5, "bronze": 2 },
+      { "name": "Badminton", "gold": 7, "silver": 4, "bronze": 3 },
+      { "name": "Diving", "gold": 10, "silver": 5, "bronze": 3 },
+      { "name": "Athletics", "gold": 5, "silver": 6, "bronze": 6 },
+      { "name": "Swimming", "gold": 5, "silver": 3, "bronze": 2 },
+      { "name": "Gymnastics", "gold": 3, "silver": 4, "bronze": 5 },
+      { "name": "Archery", "gold": 3, "silver": 2, "bronze": 1 },
+      { "name": "Weightlifting", "gold": 5, "silver": 3, "bronze": 2 },
+      { "name": "Boxing", "gold": 2, "silver": 3, "bronze": 3 },
+      { "name": "Judo", "gold": 3, "silver": 2, "bronze": 3 }
+    ]
+  },
+  {
+    "noc": "JPN",
+    "disciplines": [
+      { "name": "Judo", "gold": 5, "silver": 4, "bronze": 3 },
+      { "name": "Athletics", "gold": 3, "silver": 2, "bronze": 4 },
+      { "name": "Swimming", "gold": 4, "silver": 3, "bronze": 2 },
+      { "name": "Gymnastics", "gold": 2, "silver": 1, "bronze": 4 },
+      { "name": "Baseball", "gold": 1, "silver": 2, "bronze": 1 },
+      { "name": "Tennis", "gold": 2, "silver": 1, "bronze": 2 },
+      { "name": "Volleyball", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Cycling", "gold": 1, "silver": 2, "bronze": 3 },
+      { "name": "Wrestling", "gold": 2, "silver": 2, "bronze": 1 },
+      { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 1 }
+    ]
+  },
+  {
+    "noc": "AUS",
+    "disciplines": [
+      { "name": "Swimming", "gold": 7, "silver": 5, "bronze": 3 },
+      { "name": "Cycling", "gold": 4, "silver": 5, "bronze": 3 },
+      { "name": "Rowing", "gold": 3, "silver": 3, "bronze": 2 },
+      { "name": "Gymnastics", "gold": 1, "silver": 3, "bronze": 4 },
+      { "name": "Athletics", "gold": 2, "silver": 2, "bronze": 2 },
+      { "name": "Sailing", "gold": 1, "silver": 2, "bronze": 2 },
+      { "name": "Rugby", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Basketball", "gold": 2, "silver": 1, "bronze": 2 },
+      { "name": "Tennis", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Volleyball", "gold": 1, "silver": 1, "bronze": 2 }
+    ]
+  },
+  {
+    "noc": "FRA",
+    "disciplines": [
+      { "name": "Basketball", "gold": 2, "silver": 3, "bronze": 1 },
+      { "name": "Football", "gold": 1, "silver": 2, "bronze": 2 },
+      { "name": "Cycling", "gold": 4, "silver": 5, "bronze": 3 },
+      { "name": "Swimming", "gold": 3, "silver": 3, "bronze": 4 },
+      { "name": "Athletics", "gold": 2, "silver": 5, "bronze": 5 },
+      { "name": "Gymnastics", "gold": 2, "silver": 3, "bronze": 4 },
+      { "name": "Handball", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Judo", "gold": 1, "silver": 3, "bronze": 2 },
+      { "name": "Boxing", "gold": 2, "silver": 2, "bronze": 1 },
+      { "name": "Fencing", "gold": 2, "silver": 3, "bronze": 3 }
+    ]
+  },
+  {
+    "noc": "NED",
+    "disciplines": [
+      { "name": "Cycling", "gold": 6, "silver": 3, "bronze": 5 },
+      { "name": "Speed Skating", "gold": 7, "silver": 2, "bronze": 4 },
+      { "name": "Field Hockey", "gold": 4, "silver": 1, "bronze": 3 },
+      { "name": "Swimming", "gold": 2, "silver": 1, "bronze": 2 },
+      { "name": "Athletics", "gold": 2, "silver": 1, "bronze": 3 },
+      { "name": "Rowing", "gold": 1, "silver": 2, "bronze": 1 },
+      { "name": "Skateboarding", "gold": 1, "silver": 0, "bronze": 0 },
+      { "name": "Gymnastics", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Sailing", "gold": 1, "silver": 0, "bronze": 0 },
+      { "name": "Judo", "gold": 0, "silver": 0, "bronze": 1 }
+    ]
+  },
+  {
+    "noc": "GBR",
+    "disciplines": [
+      { "name": "Cycling", "gold": 7, "silver": 10, "bronze": 7 },
+      { "name": "Athletics", "gold": 5, "silver": 8, "bronze": 7 },
+      { "name": "Rowing", "gold": 2, "silver": 2, "bronze": 2 },
+      { "name": "Gymnastics", "gold": 0, "silver": 1, "bronze": 3 },
+      { "name": "Football", "gold": 0, "silver": 1, "bronze": 1 },
+      { "name": "Swimming", "gold": 1, "silver": 0, "bronze": 2 },
+      { "name": "Boxing", "gold": 1, "silver": 3, "bronze": 2 },
+      { "name": "Tennis", "gold": 0, "silver": 2, "bronze": 3 },
+      { "name": "Equestrian", "gold": 1, "silver": 0, "bronze": 1 },
+      { "name": "Hockey", "gold": 0, "silver": 0, "bronze": 3 }
+    ]
+  },
+  {
+    "noc": "KOR",
+    "disciplines": [
+      { "name": "Archery", "gold": 4, "silver": 2, "bronze": 1 },
+      { "name": "Taekwondo", "gold": 4, "silver": 2, "bronze": 0 },
+      { "name": "Wrestling", "gold": 3, "silver": 3, "bronze": 2 },
+      { "name": "Athletics", "gold": 1, "silver": 2, "bronze": 1 },
+      { "name": "Swimming", "gold": 1, "silver": 0, "bronze": 2 },
+      { "name": "Cycling", "gold": 1, "silver": 0, "bronze": 0 },
+      { "name": "Fencing", "gold": 0, "silver": 1, "bronze": 0 },
+      { "name": "Football", "gold": 0, "silver": 1, "bronze": 1 },
+      { "name": "Judo", "gold": 1, "silver": 0, "bronze": 1 },
+      { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 1 }
+    ]
+  },
+  {
+    "noc": "ITA",
+    "disciplines": [
+      { "name": "Cycling", "gold": 3, "silver": 4, "bronze": 5 },
+      { "name": "Athletics", "gold": 2, "silver": 4, "bronze": 3 },
+      { "name": "Fencing", "gold": 3, "silver": 2, "bronze": 2 },
+      { "name": "Rowing", "gold": 1, "silver": 2, "bronze": 3 },
+      { "name": "Swimming", "gold": 2, "silver": 1, "bronze": 4 },
+      { "name": "Gymnastics", "gold": 1, "silver": 1, "bronze": 2 },
+      { "name": "Judo", "gold": 1, "silver": 0, "bronze": 2 },
+      { "name": "Tennis", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Basketball", "gold": 0, "silver": 1, "bronze": 1 },
+      { "name": "Volleyball", "gold": 0, "silver": 1, "bronze": 2 }
+    ]
+  },
+  {
+    "noc": "GER",
+    "disciplines": [
+      { "name": "Cycling", "gold": 3, "silver": 2, "bronze": 3 },
+      { "name": "Rowing", "gold": 2, "silver": 3, "bronze": 1 },
+      { "name": "Athletics", "gold": 3, "silver": 2, "bronze": 3 },
+      { "name": "Swimming", "gold": 2, "silver": 4, "bronze": 2 },
+      { "name": "Gymnastics", "gold": 1, "silver": 2, "bronze": 0 },
+      { "name": "Football", "gold": 1, "silver": 2, "bronze": 0 },
+      { "name": "Fencing", "gold": 2, "silver": 1, "bronze": 0 },
+      { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 1 },
+      { "name": "Handball", "gold": 1, "silver": 0, "bronze": 1 },
+      { "name": "Judo", "gold": 0, "silver": 0, "bronze": 2 }
+    ]
+  },
+  {
+  "noc": "NZL",
+  "disciplines": [
+    { "name": "Rowing", "gold": 3, "silver": 2, "bronze": 1 },
+    { "name": "Cycling", "gold": 2, "silver": 1, "bronze": 1 },
+    { "name": "Athletics", "gold": 1, "silver": 2, "bronze": 0 },
+    { "name": "Rugby", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Swimming", "gold": 1, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "CAN",
+  "disciplines": [
+    { "name": "Ice Hockey", "gold": 3, "silver": 2, "bronze": 2 },
+    { "name": "Athletics", "gold": 2, "silver": 3, "bronze": 5 },
+    { "name": "Swimming", "gold": 2, "silver": 1, "bronze": 3 },
+    { "name": "Cycling", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Rowing", "gold": 1, "silver": 1, "bronze": 2 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 2 }
+  ]
+},
+{
+  "noc": "UZB",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 4, "silver": 1, "bronze": 1 },
+    { "name": "Boxing", "gold": 2, "silver": 0, "bronze": 1 },
+    { "name": "Judo", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Cycling", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "HUN",
+  "disciplines": [
+    { "name": "Fencing", "gold": 2, "silver": 3, "bronze": 1 },
+    { "name": "Swimming", "gold": 1, "silver": 1, "bronze": 3 },
+    { "name": "Athletics", "gold": 1, "silver": 2, "bronze": 0 },
+    { "name": "Rowing", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Gymnastics", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "ESP",
+  "disciplines": [
+    { "name": "Football", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Basketball", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Cycling", "gold": 1, "silver": 2, "bronze": 3 },
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 2 },
+    { "name": "Handball", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "SWE",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Skiing", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Swimming", "gold": 1, "silver": 2, "bronze": 0 },
+    { "name": "Handball", "gold": 0, "silver": 1, "bronze": 1 }
+  ]
+},
+{
+  "noc": "KEN",
+  "disciplines": [
+    { "name": "Athletics", "gold": 3, "silver": 1, "bronze": 3 },
+    { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 2 },
+    { "name": "Cycling", "gold": 0, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "NOR",
+  "disciplines": [
+    { "name": "Cross-Country Skiing", "gold": 2, "silver": 0, "bronze": 1 },
+    { "name": "Ski Jumping", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Athletics", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Cycling", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "IRL",
+  "disciplines": [
+    { "name": "Boxing", "gold": 2, "silver": 0, "bronze": 1 },
+    { "name": "Equestrian", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Rowing", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "BRA",
+  "disciplines": [
+    { "name": "Football", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Volleyball", "gold": 2, "silver": 1, "bronze": 1 },
+    { "name": "Athletics", "gold": 1, "silver": 2, "bronze": 3 },
+    { "name": "Basketball", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Boxing", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "IRI",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 1, "silver": 2, "bronze": 0 },
+    { "name": "Weightlifting", "gold": 1, "silver": 3, "bronze": 1 },
+    { "name": "Taekwondo", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Fencing", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "UKR",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 2, "silver": 2, "bronze": 1 },
+    { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 2 },
+    { "name": "Gymnastics", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "ROU",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 1, "silver": 2, "bronze": 0 },
+    { "name": "Rowing", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "GEO",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 2, "silver": 1, "bronze": 0 },
+    { "name": "Judo", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Weightlifting", "gold": 0, "silver": 1, "bronze": 1 }
+  ]
+},
+{
+  "noc": "BEL",
+  "disciplines": [
+    { "name": "Cycling", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 3 },
+    { "name": "Judo", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Boxing", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "BUL",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Weightlifting", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "SRB",
+  "disciplines": [
+    { "name": "Water Polo", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Basketball", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "CZE",
+  "disciplines": [
+    { "name": "Canoe Sprint", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Rowing", "gold": 0, "silver": 0, "bronze": 1 },
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "DEN",
+  "disciplines": [
+    { "name": "Cycling", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Handball", "gold": 0, "silver": 1, "bronze": 2 },
+    { "name": "Badminton", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "AZE",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Weightlifting", "gold": 1, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "CRO",
+  "disciplines": [
+    { "name": "Handball", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Sailing", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Water Polo", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "CUB",
+  "disciplines": [
+    { "name": "Boxing", "gold": 1, "silver": 0, "bronze": 4 },
+    { "name": "Wrestling", "gold": 1, "silver": 0, "bronze": 2 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Judo", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "BRN",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Cycling", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "SLO",
+  "disciplines": [
+    { "name": "Cycling", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Skiing", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Rowing", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "TPE",
+  "disciplines": [
+    { "name": "Badminton", "gold": 1, "silver": 0, "bronze": 2 },
+    { "name": "Weightlifting", "gold": 1, "silver": 0, "bronze": 2 },
+    { "name": "Cycling", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "AUT",
+  "disciplines": [
+    { "name": "Skiing", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Rowing", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Boxing", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "HKG",
+  "disciplines": [
+    { "name": "Table Tennis", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Badminton", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Swimming", "gold": 0, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "PHI",
+  "disciplines": [
+    { "name": "Boxing", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Weightlifting", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "ALG",
+  "disciplines": [
+    { "name": "Boxing", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Judo", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "INA",
+  "disciplines": [
+    { "name": "Badminton", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Weightlifting", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "ISR",
+  "disciplines": [
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Sailing", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Swimming", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "POL",
+  "disciplines": [
+    { "name": "Weightlifting", "gold": 1, "silver": 0, "bronze": 1 },
+    { "name": "Athletics", "gold": 0, "silver": 2, "bronze": 3 },
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 1 }
+  ]
+},
+{
+  "noc": "KAZ",
+  "disciplines": [
+    { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Judo", "gold": 0, "silver": 2, "bronze": 2 },
+    { "name": "Weightlifting", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "JAM",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Swimming", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "RSA",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Boxing", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Rugby", "gold": 0, "silver": 2, "bronze": 1 }
+  ]
+},
+{
+  "noc": "THA",
+  "disciplines": [
+    { "name": "Boxing", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Badminton", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Weightlifting", "gold": 0, "silver": 1, "bronze": 1 }
+  ]
+},
+{
+  "noc": "ETH",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 2, "bronze": 0 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "SUI",
+  "disciplines": [
+    { "name": "Cycling", "gold": 1, "silver": 1, "bronze": 1 },
+    { "name": "Skiing", "gold": 0, "silver": 1, "bronze": 2 },
+    { "name": "Judo", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "ECU",
+  "disciplines": [
+    { "name": "Weightlifting", "gold": 1, "silver": 1, "bronze": 0 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 1 }
+  ]
+},
+{
+  "noc": "POR",
+  "disciplines": [
+    { "name": "Football", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Judo", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "GRE",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 2 },
+    { "name": "Wrestling", "gold": 1, "silver": 0, "bronze": 3 },
+    { "name": "Weightlifting", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "ARG",
+  "disciplines": [
+    { "name": "Football", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Basketball", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "EGY",
+  "disciplines": [
+    { "name": "Weightlifting", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Fencing", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "TUN",
+  "disciplines": [
+    { "name": "Football", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Wrestling", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "BOT",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "CHI",
+  "disciplines": [
+    { "name": "Football", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "LCA",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "UGA",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "DOM",
+  "disciplines": [
+    { "name": "Boxing", "gold": 0, "silver": 0, "bronze": 1 },
+    { "name": "Judo", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "GUA",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "MAR",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 },
+    { "name": "Judo", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "DMA",
+  "disciplines": [
+    { "name": "Athletics", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "PAK",
+  "disciplines": [
+    { "name": "Boxing", "gold": 1, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "TUR",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 0, "silver": 1, "bronze": 3 },
+    { "name": "Weightlifting", "gold": 0, "silver": 2, "bronze": 2 },
+    { "name": "Basketball", "gold": 0, "silver": 0, "bronze": 0 }
+  ]
+},
+{
+  "noc": "MEX",
+  "disciplines": [
+    { "name": "Football", "gold": 0, "silver": 2, "bronze": 1 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 1 }
+  ]
+},
+{
+  "noc": "ARM",
+  "disciplines": [
+    { "name": "Weightlifting", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Wrestling", "gold": 0, "silver": 2, "bronze": 1 }
+  ]
+},
+{
+  "noc": "COL",
+  "disciplines": [
+    { "name": "Football", "gold": 0, "silver": 2, "bronze": 1 },
+    { "name": "Cycling", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "KGZ",
+  "disciplines": [
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Wrestling", "gold": 0, "silver": 1, "bronze": 2 }
+  ]
+},
+{
+  "noc": "PRK",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Wrestling", "gold": 0, "silver": 1, "bronze": 3 }
+  ]
+},
+{
+  "noc": "LTU",
+  "disciplines": [
+    { "name": "Basketball", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Athletics", "gold": 0, "silver": 1, "bronze": 2 }
+  ]
+},
+{
+  "noc": "IND",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 0, "silver": 1, "bronze": 2 },
+    { "name": "Boxing", "gold": 0, "silver": 0, "bronze": 3 },
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "MDA",
+  "disciplines": [
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 1 },
+    { "name": "Wrestling", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "KOS",
+  "disciplines": [
+    { "name": "Judo", "gold": 0, "silver": 1, "bronze": 0 },
+    { "name": "Wrestling", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "CYP",
+  "disciplines": [
+    { "name": "Shooting", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "FIJ",
+  "disciplines": [
+    { "name": "Rugby", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "JOR",
+  "disciplines": [
+    { "name": "Karate", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "MGL",
+  "disciplines": [
+    { "name": "Wrestling", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "PAN",
+  "disciplines": [
+    { "name": "Boxing", "gold": 0, "silver": 1, "bronze": 0 }
+  ]
+},
+{
+  "noc": "TJK",
+  "disciplines": [
+    { "name": "Boxing", "gold": 0, "silver": 0, "bronze": 1 },
+    { "name": "Wrestling", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "ALB",
+  "disciplines": [
+    { "name": "Weightlifting", "gold": 0, "silver": 0, "bronze": 1 },
+    { "name": "Wrestling", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "GRN",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "MAS",
+  "disciplines": [
+    { "name": "Badminton", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "PUR",
+  "disciplines": [
+    { "name": "Boxing", "gold": 0, "silver": 0, "bronze": 2 }
+  ]
+},
+{
+  "noc": "CIV",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "CPV",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+},
+{
+  "noc": "EOR",
+  "disciplines": [
+    { "name": "Athletics", "gold": 0, "silver": 0, "bronze": 1 }
+  ]
+}
+]
