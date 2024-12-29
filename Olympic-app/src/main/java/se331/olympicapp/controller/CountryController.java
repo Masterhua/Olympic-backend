@@ -48,8 +48,13 @@ public class CountryController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(Map.of("message", "Country with this NOC already exists"));
         }
-        Country savedCountry = countryRepository.save(newCountry);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedCountry);
+        try {
+            Country savedCountry = countryRepository.save(newCountry);
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedCountry);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("message", "Failed to add country", "error", e.getMessage()));
+        }
     }
 
     @PutMapping("/{noc}")
@@ -62,8 +67,6 @@ public class CountryController {
         }
 
         Country country = countryOpt.get();
-
-        // 根据更新的字段更新对象的值
         updates.forEach((key, value) -> {
             switch (key) {
                 case "rank":
@@ -100,7 +103,6 @@ public class CountryController {
                     country.setFlagUrl((String) value);
                     break;
                 default:
-                    // 忽略未知字段
                     break;
             }
         });

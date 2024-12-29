@@ -2,7 +2,9 @@ package se331.olympicapp.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import se331.olympicapp.dto.CommentDTO;
 import se331.olympicapp.entity.Comment;
 import se331.olympicapp.entity.UserEntity;
 import se331.olympicapp.repository.CommentRepository;
@@ -11,6 +13,7 @@ import se331.olympicapp.repository.UserRepository;
 import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/comments")
@@ -26,9 +29,23 @@ public class CommentController {
     }
 
     @GetMapping("/{countryCode}")
-    public ResponseEntity<List<Comment>> getCommentsByCountry(@PathVariable String countryCode) {
+    @Transactional(readOnly = true)
+    public ResponseEntity<List<CommentDTO>> getCommentsByCountry(@PathVariable String countryCode) {
         List<Comment> comments = commentRepository.findByCountryCode(countryCode);
-        return ResponseEntity.ok(comments);
+        List<CommentDTO> commentDTOs = comments.stream().map(comment -> {
+            String avatarUrl = comment.getUser() != null && comment.getUser().getAvatarUrl() != null
+                    ? comment.getUser().getAvatarUrl()
+                    : "/uploads/avatars/default-avatar.png"; // 默认头像
+            return new CommentDTO(
+                    comment.getId(),
+                    comment.getNickname(),
+                    comment.getContent(),
+                    avatarUrl,
+                    comment.getUser() != null ? comment.getUser().getId() : null,
+                    comment.getCountryCode()
+            );
+        }).collect(Collectors.toList());
+        return ResponseEntity.ok(commentDTOs);
     }
 
     @PostMapping(value = "/{countryCode}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

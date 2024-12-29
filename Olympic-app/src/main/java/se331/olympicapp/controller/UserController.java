@@ -65,13 +65,12 @@ public class UserController {
         return ResponseEntity.ok(Map.of("status", 200, "message", "Logout successful"));
     }
 
-    @PostMapping(value = "/register", consumes = "multipart/form-data")
-    public ResponseEntity<?> registerUser(
-            @RequestParam("username") String username,
-            @RequestParam("email") String email,
-            @RequestParam("password") String password,
-            @RequestParam(value = "avatar", required = false) MultipartFile avatar
-    ) {
+    @PostMapping(value = "/register", consumes = "application/json")
+    public ResponseEntity<?> registerUser(@RequestBody Map<String, String> userData) {
+        String username = userData.get("username");
+        String email = userData.get("email");
+        String password = userData.get("password");
+
         if (userRepository.findByUsername(username) != null) {
             logger.warn("Registration failed: Username {} already exists", username);
             return ResponseEntity.status(HttpStatus.CONFLICT).body(
@@ -79,25 +78,7 @@ public class UserController {
             );
         }
 
-        String avatarUrl = DEFAULT_AVATAR_URL;
-        if (avatar != null && !avatar.isEmpty()) {
-            try {
-                String uploadDir = "olympic-app/uploads/avatars/";
-                File directory = new File(uploadDir);
-                if (!directory.exists()) {
-                    directory.mkdirs();
-                }
-                String uniqueFileName = UUID.randomUUID().toString() + "_" + avatar.getOriginalFilename();
-                File avatarFile = new File(uploadDir + uniqueFileName);
-                avatar.transferTo(avatarFile);
-                avatarUrl = "/uploads/avatars/" + uniqueFileName;
-            } catch (IOException e) {
-                logger.error("Failed to save avatar file: {}", e.getMessage());
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
-                        Map.of("status", 500, "message", "Failed to save avatar file")
-                );
-            }
-        }
+        String avatarUrl = DEFAULT_AVATAR_URL; // 默认头像路径
 
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(username);
@@ -109,6 +90,7 @@ public class UserController {
         logger.info("New user registered: {}", username);
         return ResponseEntity.ok(Map.of("status", 200, "message", "User registered successfully"));
     }
+
 
     @GetMapping("/profile")
     public ResponseEntity<?> getUserProfile(HttpSession session) {
