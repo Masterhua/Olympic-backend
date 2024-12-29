@@ -1,17 +1,20 @@
 package se331.olympicapp.controller;
 
-import se331.olympicapp.entity.UserEntity;
-import se331.olympicapp.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpSession;
-import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.multipart.MultipartFile;
+import se331.olympicapp.entity.UserEntity;
+import se331.olympicapp.repository.UserRepository;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 @RestController
@@ -21,26 +24,17 @@ public class UserController {
     private final UserRepository userRepository;
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
+    private static final String DEFAULT_AVATAR_URL = "/uploads/avatars/default-avatar.png";
+
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody UserEntity userEntity) {
-        if (userRepository.findByUsername(userEntity.getUsername()) != null) {
-            logger.warn("Registration failed: Username {} already exists", userEntity.getUsername());
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(
-                    Map.of("status", 409, "message", "Username already exists")
-            );
-        }
-        userEntity.setRole("USER");
-        userRepository.save(userEntity);
-        logger.info("New user registered: {}", userEntity.getUsername());
-        return ResponseEntity.ok(Map.of("status", 200, "message", "User registered successfully"));
-    }
-
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody Map<String, String> loginData, HttpSession session) {
+    public ResponseEntity<?> loginUser(
+            @RequestBody Map<String, String> loginData,
+            HttpSession session
+    ) {
         String username = loginData.get("username");
         String password = loginData.get("password");
 
@@ -54,7 +48,7 @@ public class UserController {
 
         session.setAttribute("username", username);
         session.setAttribute("role", user.getRole());
-        session.setAttribute("userId", user.getId()); // 添加用户ID到会话
+        session.setAttribute("userId", user.getId());
         logger.info("User logged in successfully: {}", username);
         return ResponseEntity.ok(Map.of(
                 "status", 200,
@@ -62,6 +56,58 @@ public class UserController {
                 "role", user.getRole(),
                 "userId", user.getId()
         ));
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<?> logout(HttpSession session) {
+        session.invalidate();
+        logger.info("User logged out successfully");
+        return ResponseEntity.ok(Map.of("status", 200, "message", "Logout successful"));
+    }
+
+    @PostMapping(value = "/register", consumes = "multipart/form-data")
+    public ResponseEntity<?> registerUser(
+            @RequestParam("username") String username,
+            @RequestParam("email") String email,
+            @RequestParam("password") String password,
+            @RequestParam(value = "avatar", required = false) MultipartFile avatar
+    ) {
+        if (userRepository.findByUsername(username) != null) {
+            logger.warn("Registration failed: Username {} already exists", username);
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(
+                    Map.of("status", 409, "message", "Username already exists")
+            );
+        }
+
+        String avatarUrl = DEFAULT_AVATAR_URL;
+        if (avatar != null && !avatar.isEmpty()) {
+            try {
+                String uploadDir = "olympic-app/uploads/avatars/";
+                File directory = new File(uploadDir);
+                if (!directory.exists()) {
+                    directory.mkdirs();
+                }
+                String uniqueFileName = UUID.randomUUID().toString() + "_" + avatar.getOriginalFilename();
+                File avatarFile = new File(uploadDir + uniqueFileName);
+                avatar.transferTo(avatarFile);
+                avatarUrl = "/uploads/avatars/" + uniqueFileName;
+            } catch (IOException e) {
+                logger.error("Failed to save avatar file: {}", e.getMessage());
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                        Map.of("status", 500, "message", "Failed to save avatar file")
+                );
+            }
+        }
+
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUsername(username);
+        userEntity.setEmail(email);
+        userEntity.setPassword(password);
+        userEntity.setRole("USER");
+        userEntity.setAvatarUrl(avatarUrl);
+        userRepository.save(userEntity);
+        logger.info("New user registered: {}", username);
+        return ResponseEntity.ok(Map.of("status", 200, "message", "User registered successfully"));
     }
 
     @GetMapping("/profile")
@@ -82,6 +128,8 @@ public class UserController {
             );
         }
 
+        String avatarUrl = user.getAvatarUrl() != null ? user.getAvatarUrl() : DEFAULT_AVATAR_URL;
+
         logger.info("Profile retrieved for user: {}", username);
         return ResponseEntity.ok(Map.of(
                 "status", 200,
@@ -90,16 +138,10 @@ public class UserController {
                         "id", user.getId(),
                         "username", user.getUsername(),
                         "nickname", user.getNickname(),
-                        "role", user.getRole()
+                        "role", user.getRole(),
+                        "avatar", avatarUrl
                 )
         ));
-    }
-
-    @PostMapping("/logout")
-    public ResponseEntity<?> logout(HttpSession session) {
-        session.invalidate();
-        logger.info("User logged out successfully");
-        return ResponseEntity.ok(Map.of("status", 200, "message", "Logout successful"));
     }
 
     @GetMapping("/admin/users")
@@ -164,6 +206,36 @@ public class UserController {
         userRepository.deleteById(id);
         logger.info("User with ID {} deleted successfully", id);
         return ResponseEntity.ok(Map.of("status", 200, "message", "User deleted successfully"));
+    }
+
+    @PutMapping("/admin/users/{id}/promote")
+    public ResponseEntity<?> promoteUserToAdmin(@PathVariable Long id, HttpSession session) {
+        if (!isAdmin(session)) {
+            logger.warn("Access denied: User is not an admin");
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(
+                    Map.of("status", 403, "message", "Access denied")
+            );
+        }
+
+        UserEntity user = userRepository.findById(id).orElse(null);
+        if (user == null) {
+            logger.warn("Promote failed: User with ID {} not found", id);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                    Map.of("status", 404, "message", "User not found")
+            );
+        }
+
+        if ("ADMIN".equals(user.getRole())) {
+            logger.info("User with ID {} is already an admin", id);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                    Map.of("status", 400, "message", "User is already an admin")
+            );
+        }
+
+        user.setRole("ADMIN");
+        userRepository.save(user);
+        logger.info("User with ID {} promoted to admin successfully", id);
+        return ResponseEntity.ok(Map.of("status", 200, "message", "User promoted to admin successfully"));
     }
 
     private boolean isAdmin(HttpSession session) {
