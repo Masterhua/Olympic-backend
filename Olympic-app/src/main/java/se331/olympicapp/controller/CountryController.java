@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/countries")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "http://8.209.211.89:5173", allowCredentials = "true")
 public class CountryController {
 
     private final CountryRepository countryRepository;

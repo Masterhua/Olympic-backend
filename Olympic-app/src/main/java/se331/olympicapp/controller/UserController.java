@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "http://8.209.211.89:5173", allowCredentials = "true")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -24,7 +24,7 @@ public class UserController {
     private final UserRepository userRepository;
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    private static final String DEFAULT_AVATAR_URL = "/uploads/avatars/default-avatar.png";
+    private static final String DEFAULT_AVATAR_URL = "https://q4.itc.cn/q_70/images03/20240613/1337649c5c614354af05b57731980a32.jpeg";
 
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -78,7 +78,7 @@ public class UserController {
             );
         }
 
-        String avatarUrl = DEFAULT_AVATAR_URL; // 默认头像路径
+        String avatarUrl = DEFAULT_AVATAR_URL;
 
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(username);
